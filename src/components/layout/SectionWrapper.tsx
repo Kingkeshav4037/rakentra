@@ -19,7 +19,7 @@ export interface SectionWrapperProps {
 
   fullWidth?: boolean;
 
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
 }
 
 const spacingClasses = {
@@ -57,9 +57,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
 
   as = "section",
 }) => {
-  const Component = motion[
-    as as keyof typeof motion
-  ] as React.ElementType;
+  const Component = animate ? (motion[as as keyof typeof motion] as React.ElementType) : (as as React.ElementType);
 
   const content = (
     <div
@@ -73,19 +71,19 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
   );
 
   if (!animate) {
-    const StaticTag = as;
+    const HTMLTag = as as React.ElementType;
 
-    return (
-      <StaticTag
-        id={id}
-        className={clsx(
+    return React.createElement(
+      HTMLTag,
+      {
+        id,
+        className: clsx(
           spacingClasses[spacing],
           backgroundClasses[background],
           className
-        )}
-      >
-        {content}
-      </StaticTag>
+        ),
+      },
+      content
     );
   }
 

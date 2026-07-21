@@ -39,6 +39,7 @@ const styleVariants = {
 const Card: React.FC<CardProps> = ({
   children,
   className,
+  id,
 
   variant = "default",
 
@@ -66,6 +67,7 @@ const Card: React.FC<CardProps> = ({
   if (!animated) {
     return (
       <div
+        id={id}
         className={classes}
         {...props}
       >
@@ -76,6 +78,7 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <motion.div
+      id={id}
       whileHover={
         hover
           ? {
@@ -87,7 +90,6 @@ const Card: React.FC<CardProps> = ({
           : undefined
       }
       className={classes}
-      {...props}
     >
       {children}
     </motion.div>

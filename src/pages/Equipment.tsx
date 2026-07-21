@@ -1,8 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Settings, ShieldCheck, Zap, AlertTriangle, 
-  ArrowRight, HeartPulse, HardHat, Info 
+  ShieldCheck, HeartPulse, HardHat
 } from 'lucide-react';
 import { fleetData, maintenanceProcess, fleetSafetyStandards } from '../data/fleetData';
 import Timeline from '../components/Timeline';

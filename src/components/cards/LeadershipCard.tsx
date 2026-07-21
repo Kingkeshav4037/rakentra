@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Linkedin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export interface LeadershipCardProps {
@@ -29,10 +30,6 @@ const LeadershipCard: React.FC<LeadershipCardProps> = ({
   linkedin,
   className,
 }) => {
-    function clsx(arg0: string, className: string | undefined): string | undefined {
-      return className ? `${arg0} ${className}` : arg0;
-    }
-
   return (
     <motion.article
       whileHover={{
@@ -41,10 +38,7 @@ const LeadershipCard: React.FC<LeadershipCardProps> = ({
       transition={{
         duration: 0.25,
       }}
-      className={clsx(
-        "group overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300",
-        className
-      )}
+      className={className ? `group overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 ${className}` : "group overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300"}
     >
       {/* Profile Image */}
 
@@ -65,7 +59,7 @@ const LeadershipCard: React.FC<LeadershipCardProps> = ({
             aria-label={`${name} LinkedIn`}
             className="absolute top-5 right-5 flex h-11 w-11 items-center justify-center rounded-full bg-white text-slate-800 shadow-lg transition hover:bg-blue-700 hover:text-white"
           >
-            <Linkedin size={18} />
+            <FaLinkedin size={18} />
           </a>
         )}
       </div>
