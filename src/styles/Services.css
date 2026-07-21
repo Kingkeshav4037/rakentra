@@ -1,0 +1,432 @@
+/* Services Hero */
+.services-hero {
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--navbar-height) + var(--spacing-xl));
+  padding-bottom: var(--spacing-xl);
+  background-image: linear-gradient(rgba(10, 20, 36, 0.8), rgba(10, 20, 36, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Division Tabs Navigation */
+.tabs-nav-section {
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: var(--navbar-height-shrink);
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.tabs-container {
+  overflow: visible;
+}
+
+.tabs-list {
+  display: flex;
+  width: 100%;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: var(--spacing-md) var(--spacing-sm);
+  background: none;
+  border: none;
+  font-family: var(--font-headings);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: var(--transition-fast);
+}
+
+.tab-btn:hover {
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+}
+
+.tab-btn.active-tab {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-accent);
+}
+
+/* Services Overview Grid */
+.overview-grid-services {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: var(--spacing-3xl);
+  align-items: flex-start;
+}
+
+.overview-p-long {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.target-audience-box {
+  background-color: var(--color-surface);
+  border-left: 4px solid var(--color-accent);
+  padding: var(--spacing-lg);
+}
+
+.target-audience-box h4 {
+  font-family: var(--font-headings);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: 0.05em;
+}
+
+.target-audience-box p {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Sidebar */
+.overview-sidebar {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-xl);
+}
+
+.sidebar-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.sidebar-block.border-top {
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+}
+
+.sidebar-block h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 0.02em;
+}
+
+.sidebar-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.sidebar-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.sidebar-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* Features and Benefits Columns */
+.column-title {
+  text-transform: uppercase;
+  margin-top: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
+}
+
+.features-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.feat-check-item {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+.check-box {
+  width: 28px;
+  height: 28px;
+  background-color: rgba(224, 90, 16, 0.08);
+  border: 1px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.feat-check-item h4 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 2px;
+}
+
+.feat-check-item p {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.benefits-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.benefit-item {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+  background-color: var(--color-white);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+}
+
+.benefit-num {
+  font-family: var(--font-headings);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  line-height: 1;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 2px;
+}
+
+.benefit-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Machinery Subsection */
+.machinery-subsection {
+  margin-top: var(--spacing-3xl);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-2xl);
+}
+
+.mach-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.mach-header-icon {
+  color: var(--color-accent);
+}
+
+.mach-header h3 {
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.mach-header p {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.mach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+}
+
+.mach-item-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.mach-name {
+  font-family: var(--font-headings);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.mach-check {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  letter-spacing: 0.03em;
+}
+
+/* Safety & Projects Group (Dark Navy backdrop) */
+.safety-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+}
+
+.safety-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.safety-desc-p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+}
+
+.safety-standards-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.safety-standards-list li {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.safety-icon-bullet {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.references-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.reference-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.reference-item-card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.ref-index {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+}
+
+.ref-name {
+  font-size: 1.1rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.ref-meta {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.references-btn {
+  width: fit-content;
+}
+
+/* Services CTA banner */
+.services-cta {
+  text-align: center;
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-3xl);
+}
+
+.services-cta-container {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.services-cta-container h2 {
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.services-cta-container p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Responsiveness */
+@media (max-width: 1023px) {
+  .tabs-list {
+    flex-wrap: wrap;
+  }
+  
+  .tab-btn {
+    flex: none;
+    width: 50%;
+  }
+
+  .overview-grid-services {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .mach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .safety-projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 767px) {
+  .services-hero {
+    min-height: auto;
+    padding-top: calc(var(--navbar-height) + var(--spacing-lg));
+  }
+  
+  .tab-btn {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: var(--spacing-sm);
+  }
+  
+  .mach-grid {
+    grid-template-columns: 1fr;
+  }
+}

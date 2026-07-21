@@ -1,0 +1,118 @@
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) 0;
+}
+
+/* Central vertical track */
+.timeline-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  width: 2px;
+  background-color: var(--color-border);
+  z-index: 1;
+}
+
+.timeline-node {
+  position: relative;
+  display: flex;
+  margin-bottom: var(--spacing-xl);
+  z-index: 2;
+}
+
+.timeline-node:last-child {
+  margin-bottom: 0;
+}
+
+/* Square box for numbers */
+.timeline-number-box {
+  flex-shrink: 0;
+  width: 82px;
+  height: 82px;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.timeline-number {
+  font-family: var(--font-headings);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  line-height: 1;
+}
+
+/* Card layout */
+.timeline-content-card {
+  flex-grow: 1;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+  margin-left: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* Indicator line from card to number box */
+.timeline-content-card::after {
+  content: '';
+  position: absolute;
+  top: 41px;
+  left: -20px;
+  width: 20px;
+  height: 1px;
+  border-top: 1px dashed var(--color-border);
+}
+
+.timeline-step-title {
+  font-family: var(--font-headings);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: -0.01em;
+}
+
+.timeline-step-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsiveness */
+@media (max-width: 767px) {
+  .timeline-track {
+    left: 20px;
+  }
+  
+  .timeline-number-box {
+    width: 42px;
+    height: 42px;
+    border-width: 1px;
+  }
+  
+  .timeline-number {
+    font-size: 1.1rem;
+  }
+  
+  .timeline-content-card {
+    margin-left: var(--spacing-md);
+    padding: var(--spacing-md);
+  }
+  
+  .timeline-content-card::after {
+    top: 21px;
+    left: -10px;
+    width: 100px;
+    display: none; /* Hide connector on mobile */
+  }
+}

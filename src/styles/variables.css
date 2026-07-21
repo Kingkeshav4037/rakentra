@@ -1,0 +1,51 @@
+:root {
+  /* Colors */
+  --color-primary: #0A1424;      /* Deep Nordic Navy */
+  --color-secondary: #3A475A;    /* Steel/Slate Gray */
+  --color-accent: #E05A10;       /* Construction Orange */
+  --color-accent-hover: #C24E0D; /* Darker Orange */
+  --color-bg-warm: #FAF9F6;      /* Warm White background */
+  --color-surface: #F3F4F6;      /* Light Gray surface */
+  --color-surface-card: #FFFFFF; /* Pure White card surface */
+  --color-text-primary: #121824;  /* Dark Charcoal */
+  --color-text-secondary: #5C6779;/* Slate Gray for body */
+  --color-border: #E2E8F0;       /* Soft Gray border */
+  --color-success: #059669;      /* Forest Green */
+  --color-warning: #D97706;      /* Deep Amber */
+  --color-error: #DC2626;        /* Deep Red */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* Typography */
+  --font-headings: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Shadows - Minimal & Flat Nordic Feel */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --shadow-hover: 0 20px 25px -5px rgba(10, 20, 36, 0.08), 0 10px 10px -5px rgba(10, 20, 36, 0.04);
+
+  /* Spacing (Scandinavian Elegant Spacing / Large Margins) */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem;  /* 8px */
+  --spacing-md: 1rem;   /* 16px */
+  --spacing-lg: 1.5rem;  /* 24px */
+  --spacing-xl: 2.5rem;  /* 40px */
+  --spacing-2xl: 4rem;   /* 64px */
+  --spacing-3xl: 6rem;   /* 96px */
+
+  /* Borders */
+  --border-radius-sm: 0px;  /* Minimal straight line aesthetic */
+  --border-radius-md: 0px;  /* Zero rounded corners for pure architectural precision */
+  --border-radius-lg: 0px;  
+  
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.15s ease;
+  
+  /* Layout Dimensions */
+  --navbar-height: 80px;
+  --navbar-height-shrink: 64px;
+  --container-max-width: 1280px;
+}

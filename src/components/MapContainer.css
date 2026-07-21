@@ -1,0 +1,213 @@
+.map-section-container {
+  width: 100%;
+}
+
+.map-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+/* SVG Map Wrapper */
+.map-canvas-wrapper {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.finland-svg {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  max-height: 500px;
+}
+
+.finland-outline {
+  fill: #1A2E4C;
+  stroke: #2E476F;
+  stroke-width: 1.5;
+  transition: var(--transition-smooth);
+}
+
+.map-grid-line {
+  stroke: rgba(255, 255, 255, 0.05);
+  stroke-width: 0.75;
+}
+
+/* Custom Interactive Pins */
+.map-pulse-circle {
+  fill: rgba(224, 90, 16, 0.15);
+  stroke: var(--color-accent);
+  stroke-width: 1;
+  pointer-events: none;
+  transition: var(--transition-smooth);
+}
+
+.active-pulse {
+  animation: pulse-ring 2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  fill: rgba(224, 90, 16, 0.3);
+}
+
+.map-pin-dot {
+  fill: var(--color-secondary);
+  stroke: var(--color-white);
+  stroke-width: 1.5;
+  transition: var(--transition-fast);
+}
+
+.map-pin-dot:hover,
+.active-dot {
+  fill: var(--color-accent);
+  scale: 1.25;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.map-scale-legend {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  font-family: var(--font-headings);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.05em;
+  margin-top: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: var(--spacing-sm);
+}
+
+/* Info Panel Layout */
+.map-info-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.location-detail-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.location-type {
+  font-size: 0.75rem;
+}
+
+.location-name {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.location-address {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.loc-icon {
+  color: var(--color-accent);
+}
+
+.location-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.location-stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--spacing-md) 0;
+}
+
+.loc-stat-box {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.loc-stat-icon {
+  color: var(--color-secondary);
+}
+
+.loc-stat-val {
+  display: block;
+  font-family: var(--font-headings);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  line-height: 1.1;
+}
+
+.loc-stat-lbl {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.featured-proj-box {
+  background-color: var(--color-surface);
+  padding: var(--spacing-md);
+}
+
+.feat-lbl {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-xs);
+}
+
+.feat-val {
+  display: block;
+  font-family: var(--font-headings);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-primary);
+}
+
+.location-placeholder {
+  text-align: center;
+  padding: var(--spacing-xl);
+  border: 1px dashed var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+/* Responsiveness */
+@media (max-width: 767px) {
+  .map-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
