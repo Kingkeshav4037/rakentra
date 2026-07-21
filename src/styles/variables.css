@@ -1,51 +1,197 @@
 :root {
-  /* Colors */
-  --color-primary: #0A1424;      /* Deep Nordic Navy */
-  --color-secondary: #3A475A;    /* Steel/Slate Gray */
-  --color-accent: #E05A10;       /* Construction Orange */
-  --color-accent-hover: #C24E0D; /* Darker Orange */
-  --color-bg-warm: #FAF9F6;      /* Warm White background */
-  --color-surface: #F3F4F6;      /* Light Gray surface */
-  --color-surface-card: #FFFFFF; /* Pure White card surface */
-  --color-text-primary: #121824;  /* Dark Charcoal */
-  --color-text-secondary: #5C6779;/* Slate Gray for body */
-  --color-border: #E2E8F0;       /* Soft Gray border */
-  --color-success: #059669;      /* Forest Green */
-  --color-warning: #D97706;      /* Deep Amber */
-  --color-error: #DC2626;        /* Deep Red */
+  /* ==========================================================
+     COLOR SYSTEM
+     ========================================================== */
+
+  --color-primary: #0A1424;
+  --color-secondary: #3A475A;
+
+  --color-accent: #E05A10;
+  --color-accent-hover: #C24E0D;
+  --color-accent-light: #F97316;
+
+  --color-bg-warm: #FAF9F6;
+  --color-surface: #F3F4F6;
+  --color-surface-card: #FFFFFF;
+
+  --color-text-primary: #121824;
+  --color-text-secondary: #5C6779;
+  --color-text-light: #8A94A6;
+
+  --color-border: #E2E8F0;
+  --color-border-light: #EEF2F7;
+
+  --color-success: #059669;
+  --color-warning: #D97706;
+  --color-error: #DC2626;
+
   --color-white: #FFFFFF;
   --color-black: #000000;
 
-  /* Typography */
-  --font-headings: 'Manrope', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  /* Overlays */
 
-  /* Shadows - Minimal & Flat Nordic Feel */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
-  --shadow-hover: 0 20px 25px -5px rgba(10, 20, 36, 0.08), 0 10px 10px -5px rgba(10, 20, 36, 0.04);
+  --overlay-dark: rgba(10, 20, 36, 0.72);
+  --overlay-light: rgba(255, 255, 255, 0.75);
 
-  /* Spacing (Scandinavian Elegant Spacing / Large Margins) */
-  --spacing-xs: 0.25rem; /* 4px */
-  --spacing-sm: 0.5rem;  /* 8px */
-  --spacing-md: 1rem;   /* 16px */
-  --spacing-lg: 1.5rem;  /* 24px */
-  --spacing-xl: 2.5rem;  /* 40px */
-  --spacing-2xl: 4rem;   /* 64px */
-  --spacing-3xl: 6rem;   /* 96px */
+  /* ==========================================================
+     TYPOGRAPHY
+     ========================================================== */
 
-  /* Borders */
-  --border-radius-sm: 0px;  /* Minimal straight line aesthetic */
-  --border-radius-md: 0px;  /* Zero rounded corners for pure architectural precision */
-  --border-radius-lg: 0px;  
-  
-  /* Transitions */
-  --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-fast: all 0.15s ease;
-  
-  /* Layout Dimensions */
+  --font-headings: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Font Sizes */
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.5rem;
+  --text-6xl: 4.5rem;
+
+  /* Line Heights */
+
+  --line-tight: 1.1;
+  --line-heading: 1.2;
+  --line-normal: 1.6;
+  --line-body: 1.8;
+
+  /* Letter Spacing */
+
+  --tracking-tight: -0.03em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.08em;
+
+  /* ==========================================================
+     SPACING SYSTEM
+     ========================================================== */
+
+  --spacing-2xs: 0.125rem;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1.25rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 5rem;
+  --spacing-3xl: 7rem;
+  --spacing-4xl: 9rem;
+
+  /* Section */
+
+  --section-padding-y: 6rem;
+  --section-padding-mobile: 4rem;
+  --section-gap: 4rem;
+
+  /* ==========================================================
+     LAYOUT
+     ========================================================== */
+
+  --container-max-width: 1280px;
+
+  --content-max-width: 720px;
+  --hero-content-width: 650px;
+  --text-max-width: 65ch;
+
   --navbar-height: 80px;
   --navbar-height-shrink: 64px;
-  --container-max-width: 1280px;
+
+  /* ==========================================================
+     BORDER RADIUS
+     ========================================================== */
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 20px;
+  --border-radius-full: 9999px;
+
+  /* ==========================================================
+     SHADOWS
+     ========================================================== */
+
+  --shadow-sm:
+      0 2px 6px rgba(0,0,0,.04);
+
+  --shadow-md:
+      0 8px 20px rgba(0,0,0,.06);
+
+  --shadow-lg:
+      0 20px 40px rgba(0,0,0,.08);
+
+  --shadow-xl:
+      0 32px 60px rgba(0,0,0,.12);
+
+  --shadow-hover:
+      0 30px 60px rgba(10,20,36,.12);
+
+  /* ==========================================================
+     TRANSITIONS
+     ========================================================== */
+
+  --transition-fast:
+      all .25s cubic-bezier(.22,1,.36,1);
+
+  --transition-smooth:
+      all .45s cubic-bezier(.22,1,.36,1);
+
+  --transition-slow:
+      all .7s cubic-bezier(.22,1,.36,1);
+
+  /* ==========================================================
+     ANIMATION
+     ========================================================== */
+
+  --animation-duration-fast: .3s;
+  --animation-duration-normal: .6s;
+  --animation-duration-slow: .9s;
+
+  --animation-ease:
+      cubic-bezier(.22,1,.36,1);
+
+  /* ==========================================================
+     Z-INDEX
+     ========================================================== */
+
+  --z-base: 1;
+  --z-navbar: 1000;
+  --z-dropdown: 1010;
+  --z-sticky: 1020;
+  --z-overlay: 1030;
+  --z-modal: 1050;
+  --z-toast: 1100;
+
+  /* ==========================================================
+     GRADIENTS
+     ========================================================== */
+
+  --gradient-primary:
+      linear-gradient(
+          135deg,
+          #0A1424 0%,
+          #1E293B 100%
+      );
+
+  --gradient-accent:
+      linear-gradient(
+          135deg,
+          #E05A10,
+          #F97316
+      );
+
+  /* ==========================================================
+     GLASS EFFECT
+     ========================================================== */
+
+  --glass-bg:
+      rgba(255,255,255,.08);
+
+  --glass-border:
+      rgba(255,255,255,.15);
+
+  --glass-blur:
+      blur(14px);
 }
